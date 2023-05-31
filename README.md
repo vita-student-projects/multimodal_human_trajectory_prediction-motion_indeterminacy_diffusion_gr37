@@ -73,6 +73,8 @@ Here is a [short youtube](https://youtu.be/hOtD71qZE_I) video that summarize our
 
 ## Credits :
 [Mya Jamal Lahjouji](https://www.linkedin.com/in/mya-lahjouji-b05457233/) : mya.jamallahjouji@epfl.ch
+
 [Salim Cherkaoui](https://www.linkedin.com/in/salim-cherkaoui-911844197/) : salim.cherkaoui@epfl.ch
+
 Supervisor : Po-Chien Luan : po-chien.luan@epfl.ch
 
