@@ -1,5 +1,5 @@
 # Multimodal Human Trajectory Prediction
-## Motion Indeterminacy Diffusion (MID)
+## Motion Indeterminacy Diffusion (MID) on the Nuscene Dataset
 This repository presents our work on implementing the pedestrian trajectory prediction model, Motion Indeterminacy Diffusion (MID), with the aim of training and evaluating it on the Nuscene dataset. Our implementation is based on the original code from [MID Github Repository](https://github.com/Gutianpei/MID/tree/main).
 
 The Nuscene dataset poses unique challenges compared to the original ETH dataset that the MID model was designed to work with. As such, one of the primary components of our project involved adapting the preprocessing steps to suit the characteristics of the Nuscene dataset.
