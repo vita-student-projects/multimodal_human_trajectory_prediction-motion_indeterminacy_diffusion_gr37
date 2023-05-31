@@ -67,3 +67,7 @@ You can do the same by uploading your csv results in results (done automatically
 ## Trajectron++ results
 To get our Trajectron++ results, we followed the following Github repo : [Trajectron++: Dynamically-Feasible Trajectory Forecasting With Heterogeneous Data](https://github.com/StanfordASL/Trajectron-plus-plus/tree/master)
 but we evaluated the model only on the pedestrian, and on 10% of the Nuscene dataset.
+
+## Youtube video : 
+Here is a [short youtube](https://youtu.be/hOtD71qZE_I) video that summarize our work.
+
