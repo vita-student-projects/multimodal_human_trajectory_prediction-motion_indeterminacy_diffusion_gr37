@@ -15,3 +15,13 @@ While the Trajectron++ model consistently outperformed the MID model, we believe
 This project serves as a valuable reference for those looking to apply and compare different pedestrian trajectory prediction models on the Nuscene dataset. It also highlights the nuances and considerations required when applying these models to datasets they were not originally designed for.
 
 For a more in-depth understanding of our work, we recommend going through the code and associated documentation available in this repository. Contributions, questions, and feedback are most welcome.
+
+## Data setup
+
+### Pedestrian Datasets
+
+If you want to use the MID model on Pedestrian Datasets (ETH-UCY), please follow the original [MID Github Repository](https://github.com/Gutianpei/MID/tree/main).
+
+### NuScenes Dataset
+
+Download the nuScenes dataset (this requires signing up on their website). Note that the full dataset is very large, so if you only wish to test out the codebase and model then you can just download the nuScenes "mini" dataset which only requires around 4 GB of space. Extract the downloaded zip file's contents and place them in the experiments/nuScenes directory. Then, download the map expansion pack (v1.1) and copy the contents of the extracted maps folder into the experiments/nuScenes/v1.0-mini/maps folder. Finally, process them into a data format that our model can work with.
