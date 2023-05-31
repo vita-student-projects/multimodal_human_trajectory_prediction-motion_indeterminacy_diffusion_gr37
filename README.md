@@ -63,3 +63,7 @@ python drive/MyDrive/DLAV-2023/MID/main.py --config drive/MyDrive/DLAV-2023/MID/
 ## Result analysis :
 The result_analysis.ipynb notebook contains our results on the different prediction horizon.
 You can do the same by uploading your csv results in results (done automatically when evaluating the dataset).
+
+## Trajectron++ results
+To get our Trajectron++ results, we followed the following Github repo : [Trajectron++: Dynamically-Feasible Trajectory Forecasting With Heterogeneous Data](https://github.com/StanfordASL/Trajectron-plus-plus/tree/master)
+but we evaluated the model only on the pedestrian, and on 10% of the Nuscene dataset.
