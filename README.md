@@ -58,3 +58,6 @@ Run the following command :
 ```
 python drive/MyDrive/DLAV-2023/MID/main.py --config drive/MyDrive/DLAV-2023/MID/configs/nuscenes.yaml --dataset "nuscenes "
 ```
+## Result analysis :
+The result_analysis.ipynb notebook contains our results on the different prediction horizon.
+You can do the same by uploading your csv results in results (done automatically when evaluating the dataset).
