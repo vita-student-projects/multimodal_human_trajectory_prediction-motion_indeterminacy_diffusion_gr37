@@ -21,6 +21,8 @@ Choose to proportion of the Nuscenes dataset you want to work with in process_da
 Make sure the eval_mode is set to False in your own config file in /configs to train, and True to evaluate.
 Choose the prediction horizon you want in /utils/trajectron_hypers.py.
 
+## Step by step
+
 ### Data setup
 
 #### Pedestrian Datasets
