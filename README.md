@@ -1,1 +1,2 @@
-# multimodal_human_trajectory_prediction-motion_indeterminacy_diffusion_gr37
+# Multimodal Human Trajectory Prediction
+## Motion Indeterminacy Diffusion (MID)
