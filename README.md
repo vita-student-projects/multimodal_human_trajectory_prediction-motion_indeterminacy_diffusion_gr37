@@ -16,13 +16,18 @@ This project serves as a valuable reference for those looking to apply and compa
 
 For a more in-depth understanding of our work, we recommend going through the code and associated documentation available in this repository. Contributions, questions, and feedback are most welcome.
 
-## Data setup
+## To process, train and evaluate the model you can run the run_mid.ipynb notebook
+Choose to proportion of the Nuscenes dataset you want to work with in process_data_nuscenes.py (10% if you don't change).
+Make sure the eval_mode is set to False in your own config file in /configs to train, and True to evaluate.
+Choose the prediction horizon you want in /utils/trajectron_hypers.py.
 
-### Pedestrian Datasets
+### Data setup
+
+#### Pedestrian Datasets
 
 If you want to use the MID model on Pedestrian Datasets (ETH-UCY), please follow the original [MID Github Repository](https://github.com/Gutianpei/MID/tree/main).
 
-### NuScenes Dataset
+#### NuScenes Dataset
 
 Download the [Nuscenes dataset](https://www.nuscenes.org) (this requires signing up on [their website](https://www.nuscenes.org)). Note that the full dataset is very large, so if you only wish to test out the codebase and model then you can just download the nuScenes "mini" dataset which only requires around 4 GB of space. Extract the downloaded zip file's contents and place them in the "/v1.0/v1.0-trainval" directory (use only the metadata file). Then, download the latest map expansion pack and copy the contents of the extracted maps folder into the "v1.0/maps" folder. Finally, process them into a data format that our model can work with, by running the following :
 Install requirements :
@@ -34,4 +39,22 @@ Process Nuscenes data :
 python drive/MyDrive/DLAV-2023/MID/process_data_nuscenes.py --data=./v1.0 --version="v1.0-trainval" --output_path=drive/MyDrive/DLAV-2023/MID/processed_data_noise
 ```
 
-For more explanation, follow the directives on the [Nuscenes website](https://www.nuscenes.org)
+For more explanation, follow the directives on the [Nuscenes website](https://www.nuscenes.org).
+
+### Model Training
+You can adjust parameters in config file as you like and change the network architecture of the diffusion model in models/diffusion.py
+Make sure the eval_mode is set to False in your own config file in /configs.
+Run the following commande :
+```
+python drive/MyDrive/DLAV-2023/MID/main.py --config drive/MyDrive/DLAV-2023/MID/configs/nuscenes.yaml --dataset "nuscenes "
+```
+Logs and checkpoints will be automatically saved.
+
+### Model evaluation
+Make sure you have a trained model.
+Make sure the eval_mode is set to True in your own config file in /configs.
+Choose the prediction horizon you want in /utils/trajectron_hypers.py.
+Run the following command :
+```
+python drive/MyDrive/DLAV-2023/MID/main.py --config drive/MyDrive/DLAV-2023/MID/configs/nuscenes.yaml --dataset "nuscenes "
+```
