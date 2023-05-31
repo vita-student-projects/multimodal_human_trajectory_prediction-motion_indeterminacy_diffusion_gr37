@@ -1,8 +1,8 @@
 # Multimodal Human Trajectory Prediction
 ## Motion Indeterminacy Diffusion (MID) on the Nuscene Dataset
-This repository presents our work on implementing the pedestrian trajectory prediction model, Motion Indeterminacy Diffusion (MID), with the aim of training and evaluating it on the [Nuscene dataset](https://www.nuscenes.org). Our implementation is based on the original code from [MID Github Repository](https://github.com/Gutianpei/MID/tree/main).
+This repository presents our work on implementing the pedestrian trajectory prediction model, Motion Indeterminacy Diffusion (MID), with the aim of training and evaluating it on the [Nuscenes dataset](https://www.nuscenes.org). Our implementation is based on the original code from [MID Github Repository](https://github.com/Gutianpei/MID/tree/main).
 
-The [Nuscene dataset](https://www.nuscenes.org) poses unique challenges compared to the original ETH dataset that the MID model was designed to work with. As such, one of the primary components of our project involved adapting the preprocessing steps to suit the characteristics of the Nuscene dataset.
+The [Nuscenes dataset](https://www.nuscenes.org) poses unique challenges compared to the original ETH dataset that the MID model was designed to work with. As such, one of the primary components of our project involved adapting the preprocessing steps to suit the characteristics of the Nuscene dataset.
 
 We undertook a rigorous process of fine-tuning the MID model's hyperparameters to optimize its performance for the Nuscene dataset. This proved to be a complex task due to the intricacies of the MID model and the peculiarities of the data.
 
@@ -24,4 +24,14 @@ If you want to use the MID model on Pedestrian Datasets (ETH-UCY), please follow
 
 ### NuScenes Dataset
 
-Download the nuScenes dataset (this requires signing up on their website). Note that the full dataset is very large, so if you only wish to test out the codebase and model then you can just download the nuScenes "mini" dataset which only requires around 4 GB of space. Extract the downloaded zip file's contents and place them in the experiments/nuScenes directory. Then, download the map expansion pack (v1.1) and copy the contents of the extracted maps folder into the experiments/nuScenes/v1.0-mini/maps folder. Finally, process them into a data format that our model can work with.
+Download the [Nuscenes dataset](https://www.nuscenes.org) (this requires signing up on [their website](https://www.nuscenes.org)). Note that the full dataset is very large, so if you only wish to test out the codebase and model then you can just download the nuScenes "mini" dataset which only requires around 4 GB of space. Extract the downloaded zip file's contents and place them in the "/v1.0/v1.0-trainval" directory (use only the metadata file). Then, download the latest map expansion pack and copy the contents of the extracted maps folder into the "v1.0/maps" folder. Finally, process them into a data format that our model can work with, by running the following :
+Install requirements :
+'''
+pip install -r requirements.txt
+'''
+Process Nuscenes data :
+'''
+python drive/MyDrive/DLAV-2023/MID/process_data_nuscenes.py --data=./v1.0 --version="v1.0-trainval" --output_path=drive/MyDrive/DLAV-2023/MID/processed_data_noise
+'''
+
+For more explanation, follow the directives on the [Nuscenes website](https://www.nuscenes.org)
